@@ -4,6 +4,16 @@ package helloworld;
 
 service Greeter {
   rpc SayHello (HelloRequest) returns (HelloReply) {}
+  rpc Add (AddRequest) returns (AddResponse) {}
+}
+
+message AddRequest {
+  int32 a = 1;
+  int32 b = 2;
+}
+
+message AddResponse {
+  int32 value = 1;
 }
 
 message HelloRequest {
